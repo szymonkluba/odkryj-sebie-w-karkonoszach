@@ -11,98 +11,11 @@
   </head>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const routes = {
-      '': 'index',
-      'start': 'index',
-      'o_nas': 'about',
-      'zespol': 'team',
-      'oferta': 'offer',
-      'harmonogram': 'timetable'
-    };
-    const navLinks = document.querySelectorAll('header nav a');
     const menu = document.getElementById('menu');
     const menuToggle = document.getElementById('menu-toggle');
     menuToggle.addEventListener('click', function() {
       menu.classList.toggle('show');
     });
-    const sections = ['index', 'about', 'team', 'offer', 'timetable'];
-
-    function showSection(sectionId) {
-      sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        if (id === sectionId) {
-          el.classList.add('fade-in');
-          el.classList.add('show');
-          el.classList.remove('hide');
-          setTimeout(() => {
-            el.classList.remove('fade-in');
-          }, 400);
-        } else {
-          el.classList.remove('fade-in');
-          el.classList.add('fade-out');
-          el.classList.remove('show');
-          el.classList.add('hide');
-          setTimeout(() => {
-            el.classList.remove('fade-out');
-          }, 400);
-        }
-      });
-    }
-
-    function getRouteFromPath(path) {
-      let route = path.replace(/^\//, '').toLowerCase();
-      if (route === '') return '';
-      if (routes[route]) return route;
-      return '';
-    }
-
-    function navigate(route, pushState = true) {
-      const sectionId = routes[route] || 'index';
-      switch (sectionId) {
-        case 'index':
-        case 'team':
-        case 'offer':
-          document.body.classList.add('bg-light');
-          document.body.classList.remove('bg-dark');
-          break;
-        case 'about':
-        case 'timetable':
-          document.body.classList.add('bg-dark');
-          document.body.classList.remove('bg-light');
-          break;
-        default:
-          document.body.classList.remove('bg-light');
-          document.body.classList.remove('bg-dark');
-      }
-      showSection(sectionId);
-      // Only pushState if running on http/https
-      if (pushState && window.location.protocol.startsWith('http')) {
-        const url = route ? '/' + route : '/';
-        window.history.pushState({route}, '', url);
-      }
-    }
-
-    navLinks.forEach((link, idx) => {
-      const routeNames = ['', 'o_nas', 'zespol', 'oferta', 'harmonogram'];
-      link.href = routeNames[idx] ? '/' + routeNames[idx] : '/';
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        navLinks.forEach(l => l.classList.remove('active'));
-        menu.classList.remove('show');
-        link.classList.add('active');
-        navigate(routeNames[idx]);
-      });
-    });
-
-    window.addEventListener('popstate', function(e) {
-      const route = getRouteFromPath(window.location.pathname);
-      navigate(route, false);
-    });
-
-    // Initial load
-    const initialRoute = getRouteFromPath(window.location.pathname);
-    navigate(initialRoute, false);
   });
   </script>
 </head>
@@ -113,30 +26,31 @@
         <span id="menu-toggle">&#9776;</span>      
         <ul id="menu">
           <li>
-            <a href="/">Start</a>
+            <a href="#index">Start</a>
           </li>
           <li>
-            <a href="/o_nas">O Nas</a>
+            <a href="#about">O Nas</a>
           </li>
           <li>
-            <a href="/zespol">Zespół</a>
+            <a href="#team">Zespół</a>
           </li>
           <li>
-            <a href="/oferta">Oferta</a>
+            <a href="#offer">Oferta</a>
           </li>
           <li>
-            <a href="/harmonogram">Harmonogram wyjazdu</a>
+            <a href="#timetable">Harmonogram wyjazdu</a>
+          </li>
+          <li>
+            <a href="#booking">Zarezerwuj</a>
           </li>
         </ul>
     </nav>
   </header>
 
   <main class="content">
-
-    <img class="bg-topleft" src="img/16829fae-c209-4c46-af36-446ef98b2f92.png" alt="" />
-    <img class="bg-rotated" src="img/16829fae-c209-4c46-af36-446ef98b2f92.png" alt="" />
-
-    <section id="index">
+    <section id="index" class="bg-light">
+      <img class="bg-topleft" src="img/16829fae-c209-4c46-af36-446ef98b2f92.png" alt="" />
+      <img class="bg-rotated" src="img/16829fae-c209-4c46-af36-446ef98b2f92.png" alt="" />
       <div class="section-content">
         <img src="img\a8bbebd7-672b-4cff-9eae-935d42c01843.png" alt="Logo w kształcie szczytu góry" class="logo">
         <h1 class="title">Odkryj Siebie</h1>
@@ -144,13 +58,13 @@
         <p class="title-page">
           Wyjątkowe wyjazdy łączące psychologię, trening siłowy, jogę i kobido. Czas tylko dla Ciebie w otoczeniu górskiej przyrody.  
         </p>
-        <button>
+        <a href="#booking" class="button">
           Zarezerwuj swój wyjazd
-        </button>
+        </a>
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="bg-dark">
       <div class="section-content">
         <div>
           <h1>Twoja Podróż do Siebie</h1>
@@ -174,7 +88,7 @@
       </div>
     </section>
 
-    <section id="team">
+    <section id="team" class="bg-light">
       <div class="section-content">
          <h1>
           Poznaj nasze prowadzące
@@ -216,7 +130,7 @@
       </div>
     </section>
 
-    <section id="offer">
+    <section id="offer" class="bg-light">
       <div class="section-content">
         <h1>Nasze specjalności</h1>
         <div class="offer-content">
@@ -303,7 +217,7 @@
       </div>
     </section>
 
-    <section id="timetable">
+    <section id="timetable" class="bg-dark">
       <div class="section-content">
         <h1>Harmonogram wyjazdu</h1>
         <div class="timetable-content">
@@ -326,6 +240,31 @@
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt porro voluptas assumenda. Autem distinctio voluptatum ipsam voluptas sapiente, error accusantium explicabo vel commodi, quaerat sit fuga nostrum adipisci corrupti dolores.
             </p>
+      </div>
+    </section>
+
+    <section id="booking" class="bg-dark">
+      <div class="section-content">
+        <h1>Zarezerwuj swój wyjazd</h1>
+        <form class="booking-form">
+          <label>
+            Imię i nazwisko
+            <input type="text" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" required />
+          </label>
+          <label>
+            Numer telefonu
+            <input type="tel" required />
+          </label>
+          <label>
+            Dodatkowe uwagi
+            <textarea placeholder="Napisz do nas, jeśli masz jakieś pytania lub specjalne wymagania"></textarea>
+          </label>
+          <button type="submit" class="button">Wyślij zgłoszenie</button>
+        </form>
       </div>
     </section>
   </main>
