@@ -278,7 +278,6 @@ button:hover {
 	flex-wrap: wrap-reverse;
 	gap: 4rem;
 	margin-top: 2rem;
-	max-height: 80vh;
 }
 
 .about-image {
@@ -620,6 +619,9 @@ button:hover {
 @media (max-width: 1200px) {
   body, html {
     font-size: 14px;
+  }
+  section {
+    padding: 1rem;
   }
   .about-image {
     width: 300px;
