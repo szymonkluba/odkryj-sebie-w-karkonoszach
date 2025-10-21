@@ -1,29 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Odkryj Siebie w Karkonoszach</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Odkryj Siebie w Karkonoszach</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menu = document.getElementById('menu');
+        const menuToggle = document.getElementById('menu-toggle');
+        menuToggle.addEventListener('click', function () {
+          menu.classList.toggle('show');
+        });
+      });
+    </script>
   </head>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menu = document.getElementById('menu');
-    const menuToggle = document.getElementById('menu-toggle');
-    menuToggle.addEventListener('click', function() {
-      menu.classList.toggle('show');
-    });
-  });
-  </script>
-</head>
-<body>
-
-  <header class="header">
-    <nav>
-        <span id="menu-toggle">&#9776;</span>      
+  <body>
+    <header class="header">
+      <nav>
+        <span id="menu-toggle">&#9776;</span>
         <ul id="menu">
           <li>
             <a href="#index">Start</a>
@@ -44,229 +45,367 @@
             <a href="#booking">Zarezerwuj</a>
           </li>
         </ul>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="content">
-    <section id="index" class="bg-light">
-      <img class="bg-topleft" src="img/16829fae-c209-4c46-af36-446ef98b2f92.png" alt="" />
-      <img class="bg-rotated" src="img/16829fae-c209-4c46-af36-446ef98b2f92.png" alt="" />
-      <div class="section-content">
-        <img src="img\a8bbebd7-672b-4cff-9eae-935d42c01843.png" alt="Logo w kształcie szczytu góry" class="logo">
-        <h1 class="title">Odkryj Siebie</h1>
-        <h2 class="subtitle">w Karkonoszach</h2>
-        <p class="title-page">
-          Wyjątkowe wyjazdy łączące psychologię, trening siłowy, jogę i kobido. Czas tylko dla Ciebie w otoczeniu górskiej przyrody.  
-        </p>
-        <a href="#booking" class="button">
-          Zarezerwuj swój wyjazd
-        </a>
-      </div>
-    </section>
-
-    <section id="about" class="bg-dark">
-      <div class="section-content">
-        <div>
-          <h1>Twoja Podróż do Siebie</h1>
+    <main class="content">
+      <section id="index" class="bg-light">
+        <img
+          class="bg-topleft"
+          src="img/16829fae-c209-4c46-af36-446ef98b2f92.png"
+          alt=""
+        />
+        <img
+          class="bg-rotated"
+          src="img/16829fae-c209-4c46-af36-446ef98b2f92.png"
+          alt=""
+        />
+        <div class="section-content">
+          <img
+            class="logo"
+            src="img\a8bbebd7-672b-4cff-9eae-935d42c01843.png"
+            alt="Logo w kształcie szczytu góry"
+          />
+          <h1 class="title">Odkryj Siebie</h1>
+          <h2 class="subtitle">w Karkonoszach</h2>
+          <p class="title-page">
+            Wyjątkowe wyjazdy łączące psychologię, trening siłowy, jogę i
+            kobido. Czas tylko dla Ciebie w otoczeniu górskiej przyrody.
+          </p>
+          <a class="button" href="#booking"> Zarezerwuj swój wyjazd </a>
         </div>
-        <div class="about-content">
+      </section>
+
+      <section id="about" class="bg-dark">
+        <div class="section-content">
           <div>
-            <img class="about-image" src="img\bcdbc0a0faed1d931b2c86d9d65edb3a.png" alt="Ścieżka górska">
+            <h1>Twoja Podróż do Siebie</h1>
           </div>
-          <div>
-            <p>
-              W sercu Karkonoszy tworzymy przestrzeń, gdzie kobiety mogą odnaleźć równowagę między ciałem a&nbsp;umysłem. Nasze wyjazdy to unikalne połączenie pracy psychologicznej z&nbsp;aktywnością fizyczną.
-            </p>
-            <p>
-              Oferujemy holistyczne podejście do rozwoju osobistego, łącząc nowoczesne metody terapeutyczne z tradycyjnymi praktykami wellness. Każdy wyjazd to starannie zaplanowana podróż ku lepszemu poznaniu siebie.
-            </p>
-            <p>
-              Górski klimat Karkonoszy sprzyja refleksji i odnowie. To idealne miejsce, by zatrzymać się, odetchnąć i&nbsp;zainwestować w&nbsp;siebie.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="bg-light">
-      <div class="section-content">
-         <h1>
-          Poznaj nasze prowadzące
-        </h1>
-        <div class="team-content">
-          <div class="team-member-card">
-            <img class="team-member-image" src="img/83edc627e576e0de64be47079c8d275d.png" alt="Jowita Misiakowska">
-            <h2>Jowita Misiakowska</h2>
-            <hr />
-            <p class="team-member-bio">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias vel deserunt nam. Aut inventore porro aliquid illum error fuga reprehenderit ut velit recusandae voluptates voluptatum eveniet ipsam, fugit in enim?
-            </p>
-          </div>
-          <div class="team-member-card">
-            <img class="team-member-image" src="img\cc227b8948a4191a8097a342193eac96.png" alt="Alicja Kaczmarek">
-            <h2>Alicja Kaczmarek</h2>
-            <hr />
-            <p class="team-member-bio">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatem quisquam repellat, ut hic dolore aperiam mollitia labore aliquid unde nostrum vitae officia enim consequuntur quod, eum beatae expedita a.
-            </p>
-          </div>
-          <div class="team-member-card">
-            <img class="team-member-image" src="img\a62236578eefdc269a072034c915da0b.png" alt="Magdalena Kamionka">
-            <h2>Magdalena Kamionka</h2>
-            <hr />
-            <p class="team-member-bio">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia unde temporibus dignissimos nesciunt nisi velit qui. Fugit laudantium delectus voluptate, magnam quos quis, aut cupiditate eos non laboriosam sed voluptatem.
-            </p>
-          </div>
-          <div class="team-member-card">
-            <img class="team-member-image" src="" alt="">
-            <h2>Anna ...</h2>
-            <hr />
-            <p class="team-member-bio">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et veniam corporis excepturi exercitationem? Laborum, quo et, dicta dolorum, exercitationem sed in modi quam cum nisi harum culpa asperiores ipsum sequi.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="offer" class="bg-light">
-      <div class="section-content">
-        <h1>Nasze specjalności</h1>
-        <div class="offer-content">
-          <div class="offer-item">
-            <img class="offer-item-image" src="img\7006c3ce-9e49-479c-a718-fbd8e97ddfaa.png" alt="Sesje psychologiczne">
-            <h2>Sesje psychologiczne</h2>
-            <hr />
-            <p class="offer-item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut beatae recusandae harum consequatur dolores. Voluptatum atque, est facere voluptas hic, neque quas, ea consequatur praesentium laudantium perspiciatis modi quod accusamus!
-            </p>
-          </div>
-          <div class="offer-item">
-            <img class="offer-item-image" src="img\1404a5d0b77b924551f6833f79100747.png" alt="Trening siłowy">
-            <h2>Trening siłowy</h2>
-            <hr />
-            <p class="offer-item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda doloremque rerum commodi aliquam placeat veritatis, veniam id magni. Ipsum aliquid illo iure enim repellendus necessitatibus accusamus quia delectus tempore!
-            </p>
-          </div>
-          <div class="offer-item">
-            <img class="offer-item-image" src="img/3cba3f6d-0fc7-42b5-95be-365b4a6dd4ed.png" alt="Joga i Mindfulness">
-            <h2>Joga & Mindfulness</h2>
-            <hr />
-            <p class="offer-item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cum quas, a laboriosam sit optio dolorum pariatur voluptates sed dolor excepturi natus debitis! Pariatur unde reiciendis dolorem fugit excepturi nam.
-            </p>
-          </div>
-          <div class="offer-item">
-            <img class="offer-item-image" src="img\ee19991c21db0c64899c7e3af7b626a1.png" alt="Masaż Kobido">
-            <h2>Masaż Kobido</h2>
-            <hr />
-            <p class="offer-item-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum maiores, eum nulla ipsum adipisci fugiat autem, alias, cupiditate laborum similique atque odit? Vel quibusdam, saepe voluptatem reprehenderit aliquid voluptas corporis.
-            </p>
-          </div>
-
-          <div class="offer-item offer-item-wide">
-            <img class="offer-item-image-wide" src="img\2175f85a440d8b2335ee671c0722d283.png" alt="Medytująca kobieta w kreskówkowym stylu">
+          <div class="about-content">
             <div>
-              <h2>... a po zajęciach czas na chwilę relaksu (w malowniczych okolicznościach przyrody)</h2>
-              <p class="offer-item-wide-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum neque totam, dolor nemo voluptate laudantium beatae asperiores numquam, est rerum praesentium sequi modi esse tempora sunt facere quasi odit? Inventore.
-              </p>
+              <img
+                class="about-image"
+                src="img\bcdbc0a0faed1d931b2c86d9d65edb3a.png"
+                alt="Ścieżka górska"
+              />
             </div>
-            <div class="offer-item-wide-images">
-              <img src="img\73e9c634fc7ec73597a13717c4d93d27.png" alt="Wodospad">
-              <img src="img\01ac3e8d541dc1470ae1df42b5f76510.png" alt="Góry zimą">
-            </div>
-          </div>
-
-          <div class="offer-item offer-item-gallery">
-            <h2>Tu odbędzie się kobiecy weekend:</h2>
-            <div class="offer-item-gallery-images">
-              <img src="img\0c018b5acac17cca5999d9e3bdbf582b.png" alt="Łazienka">
-              <img src="img\1a209bcc292e883ffdac704d170ed197.png" alt="Pokój z łóżkiem i korytarz">
-              <img src="img\662f8126f837be918518f2ccc2bda73e.png" alt="Widok domku z zewnątrz">
-              <img src="img\811c215a6e4c2894e6bb14479636a811.png" alt="Sala do jogi">
-              <img src="img\0116345b0b9d69bf0fcaf8c228508642.png" alt="Polna droga przy domku">
-              <img src="img\77338124fbea2e13f8930cc843e54fe8.png" alt="Pokój z łóżkiem i stolikiem">
-              <img src="img\c1c800daf9bc5e1c1098b7b2b204fa84.png" alt="Domek nocą">
-              <img src="img\d8329fd3f0ee140ad34cfd1b2dbf3de9.png" alt="Sala do jogi z matami">
-            </div>
-          </div>
-
-          <div class="offer-item offer-item-wide">
             <div>
-              <h2> GDZIE?</h2>
-              <p class="offer-item-wide-description">
-                🏠 Bukowy Gaj 4, 58-563<br />
-                Przesieka
+              <p>
+                W sercu Karkonoszy tworzymy przestrzeń, gdzie kobiety mogą
+                odnaleźć równowagę między ciałem a&nbsp;umysłem. Nasze wyjazdy
+                to unikalne połączenie pracy psychologicznej z&nbsp;aktywnością
+                fizyczną.
               </p>
-              <h2>NOCLEGI</h2>
-              <p class="offer-item-wide-description">
-                Nocować będziemy w 2 oraz 4 osobowych pokojach, Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              <h2>WYŻYWIENIE</h2>
-              <p class="offer-item-wide-description">
-                W cenie dwa  śniadania, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              <p>
+                Oferujemy holistyczne podejście do rozwoju osobistego, łącząc
+                nowoczesne metody terapeutyczne z tradycyjnymi praktykami
+                wellness. Każdy wyjazd to starannie zaplanowana podróż ku
+                lepszemu poznaniu siebie.
               </p>
+              <p>
+                Górski klimat Karkonoszy sprzyja refleksji i odnowie. To idealne
+                miejsce, by zatrzymać się, odetchnąć i&nbsp;zainwestować
+                w&nbsp;siebie.
+              </p>
+            </div>
           </div>
-          <div class="offer-item-wide-images">
-            <img src="img\87215f8bfa9194e247d3871a4974fdba.png" alt="Stół z jedzeniem">
-            <img src="img\7b2f4a2609fcd82f85294aa3ec0a49c3.png" alt="Rząd krzeseł przy stole">
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="timetable" class="bg-dark">
-      <div class="section-content">
-        <h1>Harmonogram wyjazdu</h1>
-        <div class="timetable-content">
-          <div class="timetable-day-card">
-            <h2>Dzień 1</h2>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti tempore delectus repellendus nobis molestiae impedit laudantium sint adipisci deleniti sit. Animi distinctio facere dolorum sed dicta sequi expedita eveniet autem.
+      <section id="team" class="bg-light">
+        <div class="section-content">
+          <h1>Poznaj nasze prowadzące</h1>
+          <div class="team-content">
+            <div class="team-member-card">
+              <img
+                class="team-member-image"
+                src="img/83edc627e576e0de64be47079c8d275d.png"
+                alt="Jowita Misiakowska"
+              />
+              <h2>Jowita Misiakowska</h2>
+              <hr />
+              <p class="team-member-bio">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
+                vel deserunt nam. Aut inventore porro aliquid illum error fuga
+                reprehenderit ut velit recusandae voluptates voluptatum eveniet
+                ipsam, fugit in enim?
+              </p>
+            </div>
+            <div class="team-member-card">
+              <img
+                class="team-member-image"
+                src="img\cc227b8948a4191a8097a342193eac96.png"
+                alt="Alicja Kaczmarek"
+              />
+              <h2>Alicja Kaczmarek</h2>
+              <hr />
+              <p class="team-member-bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                voluptatem quisquam repellat, ut hic dolore aperiam mollitia
+                labore aliquid unde nostrum vitae officia enim consequuntur
+                quod, eum beatae expedita a.
+              </p>
+            </div>
+            <div class="team-member-card">
+              <img
+                class="team-member-image"
+                src="img\a62236578eefdc269a072034c915da0b.png"
+                alt="Magdalena Kamionka"
+              />
+              <h2>Magdalena Kamionka</h2>
+              <hr />
+              <p class="team-member-bio">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
+                unde temporibus dignissimos nesciunt nisi velit qui. Fugit
+                laudantium delectus voluptate, magnam quos quis, aut cupiditate
+                eos non laboriosam sed voluptatem.
+              </p>
+            </div>
+            <div class="team-member-card">
+              <img class="team-member-image" src="" alt="" />
+              <h2>Anna ...</h2>
+              <hr />
+              <p class="team-member-bio">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                veniam corporis excepturi exercitationem? Laborum, quo et, dicta
+                dolorum, exercitationem sed in modi quam cum nisi harum culpa
+                asperiores ipsum sequi.
+              </p>
+            </div>
           </div>
-          <div class="timetable-day-card">
-            <h2>Dzień 2</h2>
-            <hr />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nobis accusantium cum? Sapiente, suscipit adipisci libero dolorem dicta iste dignissimos molestias saepe corrupti? Maxime, quam vitae incidunt ratione a dolores!
-            </p>
-          </div>
-          <div class="timetable-day-card">
-            <h2>Dzień 3</h2>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt porro voluptas assumenda. Autem distinctio voluptatum ipsam voluptas sapiente, error accusantium explicabo vel commodi, quaerat sit fuga nostrum adipisci corrupti dolores.
-            </p>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section id="booking" class="bg-dark">
-      <div class="section-content">
-        <h1>Zarezerwuj swój wyjazd</h1>
-        <form class="booking-form">
-          <label>
-            Imię i nazwisko
-            <input type="text" required />
-          </label>
-          <label>
-            E-mail
-            <input type="email" required />
-          </label>
-          <label>
-            Numer telefonu
-            <input type="tel" required />
-          </label>
-          <label>
-            Dodatkowe uwagi
-            <textarea placeholder="Napisz do nas, jeśli masz jakieś pytania lub specjalne wymagania"></textarea>
-          </label>
-          <button type="submit" class="button">Wyślij zgłoszenie</button>
-        </form>
-      </div>
-    </section>
-  </main>
-</body> 
+      <section id="offer" class="bg-light">
+        <div class="section-content">
+          <h1>Nasze specjalności</h1>
+          <div class="offer-content">
+            <div class="offer-item">
+              <img
+                class="offer-item-image"
+                src="img\7006c3ce-9e49-479c-a718-fbd8e97ddfaa.png"
+                alt="Sesje psychologiczne"
+              />
+              <h2>Sesje psychologiczne</h2>
+              <hr />
+              <p class="offer-item-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                beatae recusandae harum consequatur dolores. Voluptatum atque,
+                est facere voluptas hic, neque quas, ea consequatur praesentium
+                laudantium perspiciatis modi quod accusamus!
+              </p>
+            </div>
+            <div class="offer-item">
+              <img
+                class="offer-item-image"
+                src="img\1404a5d0b77b924551f6833f79100747.png"
+                alt="Trening siłowy"
+              />
+              <h2>Trening siłowy</h2>
+              <hr />
+              <p class="offer-item-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                assumenda doloremque rerum commodi aliquam placeat veritatis,
+                veniam id magni. Ipsum aliquid illo iure enim repellendus
+                necessitatibus accusamus quia delectus tempore!
+              </p>
+            </div>
+            <div class="offer-item">
+              <img
+                class="offer-item-image"
+                src="img/3cba3f6d-0fc7-42b5-95be-365b4a6dd4ed.png"
+                alt="Joga i Mindfulness"
+              />
+              <h2>Joga & Mindfulness</h2>
+              <hr />
+              <p class="offer-item-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                cum quas, a laboriosam sit optio dolorum pariatur voluptates sed
+                dolor excepturi natus debitis! Pariatur unde reiciendis dolorem
+                fugit excepturi nam.
+              </p>
+            </div>
+            <div class="offer-item">
+              <img
+                class="offer-item-image"
+                src="img\ee19991c21db0c64899c7e3af7b626a1.png"
+                alt="Masaż Kobido"
+              />
+              <h2>Masaż Kobido</h2>
+              <hr />
+              <p class="offer-item-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Nostrum maiores, eum nulla ipsum adipisci fugiat autem, alias,
+                cupiditate laborum similique atque odit? Vel quibusdam, saepe
+                voluptatem reprehenderit aliquid voluptas corporis.
+              </p>
+            </div>
+
+            <div class="offer-item offer-item-wide">
+              <img
+                class="offer-item-image-wide"
+                src="img\2175f85a440d8b2335ee671c0722d283.png"
+                alt="Medytująca kobieta w kreskówkowym stylu"
+              />
+              <div>
+                <h2>
+                  ... a po zajęciach czas na chwilę relaksu (w malowniczych
+                  okolicznościach przyrody)
+                </h2>
+                <p class="offer-item-wide-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Illum neque totam, dolor nemo voluptate laudantium beatae
+                  asperiores numquam, est rerum praesentium sequi modi esse
+                  tempora sunt facere quasi odit? Inventore.
+                </p>
+              </div>
+              <div class="offer-item-wide-images">
+                <img
+                  src="img\73e9c634fc7ec73597a13717c4d93d27.png"
+                  alt="Wodospad"
+                />
+                <img
+                  src="img\01ac3e8d541dc1470ae1df42b5f76510.png"
+                  alt="Góry zimą"
+                />
+              </div>
+            </div>
+
+            <div class="offer-item offer-item-gallery">
+              <h2>Tu odbędzie się kobiecy weekend:</h2>
+              <div class="offer-item-gallery-images">
+                <img
+                  src="img\0c018b5acac17cca5999d9e3bdbf582b.png"
+                  alt="Łazienka"
+                />
+                <img
+                  src="img\1a209bcc292e883ffdac704d170ed197.png"
+                  alt="Pokój z łóżkiem i korytarz"
+                />
+                <img
+                  src="img\662f8126f837be918518f2ccc2bda73e.png"
+                  alt="Widok domku z zewnątrz"
+                />
+                <img
+                  src="img\811c215a6e4c2894e6bb14479636a811.png"
+                  alt="Sala do jogi"
+                />
+                <img
+                  src="img\0116345b0b9d69bf0fcaf8c228508642.png"
+                  alt="Polna droga przy domku"
+                />
+                <img
+                  src="img\77338124fbea2e13f8930cc843e54fe8.png"
+                  alt="Pokój z łóżkiem i stolikiem"
+                />
+                <img
+                  src="img\c1c800daf9bc5e1c1098b7b2b204fa84.png"
+                  alt="Domek nocą"
+                />
+                <img
+                  src="img\d8329fd3f0ee140ad34cfd1b2dbf3de9.png"
+                  alt="Sala do jogi z matami"
+                />
+              </div>
+            </div>
+
+            <div class="offer-item offer-item-wide">
+              <div>
+                <h2>GDZIE?</h2>
+                <p class="offer-item-wide-description">
+                  🏠 Bukowy Gaj 4, 58-563<br />
+                  Przesieka
+                </p>
+                <h2>NOCLEGI</h2>
+                <p class="offer-item-wide-description">
+                  Nocować będziemy w 2 oraz 4 osobowych pokojach, Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit.
+                </p>
+
+                <h2>WYŻYWIENIE</h2>
+                <p class="offer-item-wide-description">
+                  W cenie dwa śniadania, Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </div>
+              <div class="offer-item-wide-images">
+                <img
+                  src="img\87215f8bfa9194e247d3871a4974fdba.png"
+                  alt="Stół z jedzeniem"
+                />
+                <img
+                  src="img\7b2f4a2609fcd82f85294aa3ec0a49c3.png"
+                  alt="Rząd krzeseł przy stole"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="timetable" class="bg-dark">
+        <div class="section-content">
+          <h1>Harmonogram wyjazdu</h1>
+          <div class="timetable-content">
+            <div class="timetable-day-card">
+              <h2>Dzień 1</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Corrupti tempore delectus repellendus nobis molestiae impedit
+                laudantium sint adipisci deleniti sit. Animi distinctio facere
+                dolorum sed dicta sequi expedita eveniet autem.
+              </p>
+            </div>
+            <div class="timetable-day-card">
+              <h2>Dzień 2</h2>
+              <hr />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officiis nobis accusantium cum? Sapiente, suscipit adipisci
+                libero dolorem dicta iste dignissimos molestias saepe corrupti?
+                Maxime, quam vitae incidunt ratione a dolores!
+              </p>
+            </div>
+            <div class="timetable-day-card">
+              <h2>Dzień 3</h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Incidunt porro voluptas assumenda. Autem distinctio voluptatum
+                ipsam voluptas sapiente, error accusantium explicabo vel
+                commodi, quaerat sit fuga nostrum adipisci corrupti dolores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" class="bg-dark">
+        <div class="section-content">
+          <h1>Zarezerwuj swój wyjazd</h1>
+          <form class="booking-form">
+            <label>
+              Imię i nazwisko
+              <input type="text" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" required />
+            </label>
+            <label>
+              Numer telefonu
+              <input type="tel" required />
+            </label>
+            <label>
+              Dodatkowe uwagi
+              <textarea
+                placeholder="Napisz do nas, jeśli masz jakieś pytania lub specjalne wymagania"
+              ></textarea>
+            </label>
+            <button class="button" type="submit">Wyślij zgłoszenie</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
