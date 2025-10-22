@@ -14,10 +14,17 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const menu = document.getElementById('menu');
+        const menuButtons = document.getElementsByTagName('a');
         const menuToggle = document.getElementById('menu-toggle');
         menuToggle.addEventListener('click', function () {
           menu.classList.toggle('show');
+          menu.classList.remove('hide');
         });
+        Array.from(menuButtons).forEach((button) =>
+          button.addEventListener('click', function () {
+            menu.classList.toggle('hide');
+          })
+        );
       });
     </script>
   </head>
@@ -385,8 +392,6 @@
           <h1>Zarezerwuj swój wyjazd</h1>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwGoazFXcUN4dKPyT7gU2_6ynrosiMSA/viewform?embedded=true"
-            width="640"
-            height="974"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
