@@ -1,3 +1,7 @@
+[build]
+  command = "bundle install && bundle exec jekyll build"
+  publish = "_site"
+
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
@@ -8,4 +12,3 @@
   to = "https://api.netlify.com/:splat"
   status = 200
   force = true
-    
