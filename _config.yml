@@ -1,7 +1,6 @@
 title: 'Odkryj Siebie w Karkonoszach'
 description: 'Wyjazdy łączące psychologię, trening siłowy, jogę i kobido.'
 markdown: kramdown
-theme: minima
 exclude:
   - admin
   - netlify.toml
