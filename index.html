@@ -97,7 +97,8 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
         });
         Array.from(menuButtons).forEach((button) =>
           button.addEventListener('click', function () {
-            menu.classList.toggle('hide');
+            if (menuToggle.style.display !== 'none')
+              menu.classList.toggle('hide');
           })
         );
       });
@@ -145,12 +146,12 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
         <div class="section-content">
           <img
             class="logo"
-            src="{{ hero_logo }}"
+            src="{{ site.hero_logo }}"
             alt="Logo w kształcie szczytu góry"
           />
-          <h1 class="title">{{ hero_title }}</h1>
-          <h2 class="subtitle">{{ hero_subtitle }}</h2>
-          <p class="title-page">{{ hero_description }}</p>
+          <h1 class="title">{{ site.hero_title }}</h1>
+          <h2 class="subtitle">{{ site.hero_subtitle }}</h2>
+          <p class="title-page">{{ site.hero_description }}</p>
           <a class="button" href="#booking"> Zarezerwuj swój wyjazd </a>
         </div>
       </section>
@@ -169,7 +170,7 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
               />
             </div>
             <div>
-              {% for entry in about %}
+              {% for entry in site.about %}
               <p>{{ entry.about_text }}</p>
               {% endfor %}
             </div>
@@ -179,9 +180,9 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
 
       <section id="team" class="bg-light">
         <div class="section-content">
-          <h1>{{ team_title }}</h1>
+          <h1>{{ site.team_title }}</h1>
           <div class="team-content">
-            {% for entry in team %}
+            {% for entry in site.team %}
             <div class="team-member-card">
               <img
                 class="team-member-image"
@@ -199,9 +200,9 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
 
       <section id="offer" class="bg-light">
         <div class="section-content">
-          <h1>{{ offer_title }}</h1>
+          <h1>{{ site.offer_title }}</h1>
           <div class="offer-content">
-            {% for entry in offer_items %}
+            {% for entry in site.offer_items %}
             <div class="offer-item">
               <img
                 class="offer-item-image"
@@ -221,9 +222,9 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
                 alt="Medytująca kobieta w kreskówkowym stylu"
               />
               <div>
-                <h2>{{}}</h2>
+                <h2>{{ site.offer_wide_title }}</h2>
                 <p class="offer-item-wide-description">
-                  {{ offer_wide_title }}
+                  {{ site.offer_wide_description }}
                 </p>
               </div>
               <div class="offer-item-wide-images">
@@ -239,9 +240,9 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
             </div>
 
             <div class="offer-item offer-item-gallery">
-              <h2>{{ gallery_title }}</h2>
+              <h2>{{ site.gallery_title }}</h2>
               <div class="offer-item-gallery-images">
-                {% for entry in gallery %}
+                {% for entry in site.gallery %}
                 <img
                   src="{{ entry.image }}"
                   alt="{{ entry.alternative_text }}"
@@ -252,17 +253,17 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
 
             <div class="offer-item offer-item-wide">
               <div>
-                <h2>{{ location_title }}</h2>
+                <h2>{{ site.location_title }}</h2>
                 <p class="offer-item-wide-description">
-                  {{ location_details }}
+                  {{ site.location_details }}
                 </p>
-                <h2>{{ accomodation_title }}</h2>
+                <h2>{{ site.accomodation_title }}</h2>
                 <p class="offer-item-wide-description">
-                  {{ accomodation_details }}
+                  {{ site.accomodation_details }}
                 </p>
-                <h2>{{ catering_title }}</h2>
+                <h2>{{ site.catering_title }}</h2>
                 <p class="offer-item-wide-description">
-                  {{ catering_details }}
+                  {{ site.catering_details }}
                 </p>
               </div>
               <div class="offer-item-wide-images">
@@ -281,9 +282,9 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
       </section>
       <section id="timetable" class="bg-dark">
         <div class="section-content">
-          <h1>{{ timetable_title }}</h1>
+          <h1>{{ site.timetable_title }}</h1>
           <div class="timetable-content">
-            {% for entry in timetable %}
+            {% for entry in site.timetable %}
             <div class="timetable-day-card">
               <h2>{{ entry.day }}</h2>
               <hr />
@@ -296,9 +297,9 @@ booking_form_url: 'https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwG
 
       <section id="booking" class="bg-light">
         <div class="section-content">
-          <h1>{{ booking_title }}</h1>
+          <h1>{{ site.booking_title }}</h1>
           <iframe
-            src="{{ booking_form_url }}"
+            src="{{ site.booking_form_url }}"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
