@@ -1,0 +1,139 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: 'img/uploads'
+public_folder: '/img/uploads'
+
+collections:
+  - name: 'strona'
+    label: 'Zawartość strony'
+    files:
+      - file: 'index.html'
+        label: 'Landing page'
+        name: 'landing'
+        fields:
+          - { label: 'Tytuł strony (meta)', name: 'title', widget: 'string' }
+          - { label: 'Logo (główne)', name: 'hero_logo', widget: 'image' }
+          - { label: 'Nagłówek główny', name: 'hero_title', widget: 'string' }
+          - { label: 'Podtytuł', name: 'hero_subtitle', widget: 'string' }
+          - { label: 'Opis wstępu', name: 'hero_description', widget: 'text' }
+
+          - {
+              label: "Tytuł sekcji 'O nas'",
+              name: 'about_title',
+              widget: 'string',
+            }
+          
+          - label: 'O nas"
+            name: 'about'
+            widget: 'list'
+            fileds:
+              - { label: 'Akapit', name: 'about_text', widget: 'text' }
+          
+          - {
+              label: "Tytuł sekcji 'Zespół'",
+              name: 'about_title',
+              widget: 'string',
+            }
+
+          - label: 'Zespół' 
+            name: 'team'
+            widget: 'list'
+            fields:
+              - { label: 'Imię i nazwisko', name: 'name', widget: 'string' }
+              - { label: 'Zdjęcie', name: 'image', widget: 'image' }
+              - { label: 'Opis', name: 'bio', widget: 'text' }
+
+          - {
+              label: "Tytuł sekcji 'Oferta'",
+              name: 'offer_title',
+              widget: 'string',
+            }
+          - label: 'Pozycje oferty'
+            name: 'offer_items'
+            widget: 'list'
+            fields:
+              - { label: 'Tytuł', name: 'title', widget: 'string' }
+              - { label: 'Obrazek', name: 'image', widget: 'image' }
+              - { label: 'Opis', name: 'description', widget: 'text' }
+
+          - {
+              label: "Tytuł dodatkowego kafelka oferty",
+              name: 'offer_wide_title',
+              widget: 'string',
+            }
+
+          - {
+              label: "Treść dodatkowego kafelka oferty",
+              name: 'offer_wide_description',
+              widget: 'string',
+            }
+
+          - {
+              label: "Tytuł galerii",
+              name: 'gallery_title',
+              widget: 'string',
+            }
+          - label: 'Obrazki w galerii'
+            name: 'gallery'
+            widget: 'list'
+            fields:
+              - { label: 'Obrazek', name: 'image', widget: 'image' }
+              - { label: 'Tekst alternatywny', name: 'alternative_text', widget: 'text' }
+
+          - {
+              label: "Tytuł sekcji 'Lokalizacja'",
+              name: 'location_title',
+              widget: 'string',
+            }
+          - {
+              label: "Treść sekcji 'Lokalizacja'",
+              name: 'location_details',
+              widget: 'string',
+            }
+
+          - {
+              label: "Tytuł sekcji 'Nocleg'",
+              name: 'accomodation_title',
+              widget: 'string',
+            }
+          - {
+              label: "Treść sekcji 'Nocleg'",
+              name: 'accomodation_details',
+              widget: 'string',
+            }
+
+          - {
+              label: "Tytuł sekcji 'Wyżywienie'",
+              name: 'catering_title',
+              widget: 'string',
+            }
+          - {
+              label: "Treść sekcji 'Wyżywienie'",
+              name: 'catering_details',
+              widget: 'string',
+            }
+
+          - {
+              label: "Tytuł sekcji 'Harmonogram'",
+              name: 'timetable_title',
+              widget: 'string',
+            }
+          - label: 'Dni harmonogramu'
+            name: 'timetable'
+            widget: 'list'
+            fields:
+              - { label: 'Dzień', name: 'day', widget: 'string' }
+              - { label: 'Opis', name: 'description', widget: 'text' }
+
+          - {
+              label: "Tytuł sekcji 'Rezerwacja'",
+              name: 'booking_title',
+              widget: 'string',
+            }
+          - {
+              label: 'Link do formularza Google',
+              name: 'booking_form_url',
+              widget: 'string',
+            }
