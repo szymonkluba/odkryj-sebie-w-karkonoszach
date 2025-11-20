@@ -10,21 +10,29 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
-    <title>Odkryj Siebie w Karkonoszach</title>
+    <title>Weekend dla kobiet</title>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const menu = document.getElementById('menu');
-        const menuButtons = document.getElementsByTagName('a');
+        const menuLinks = document.querySelectorAll('#menu a');
         const menuToggle = document.getElementById('menu-toggle');
+
+        // Toggle menu when hamburger is clicked
         menuToggle.addEventListener('click', function () {
           menu.classList.toggle('show');
           menu.classList.remove('hide');
         });
-        Array.from(menuButtons).forEach((button) =>
-          button.addEventListener('click', function () {
-            menu.classList.toggle('hide');
-          })
-        );
+
+        // Hide menu when menu items are clicked (only on mobile)
+        menuLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            // Only hide menu if toggle button is visible (mobile view)
+            if (document.body.clientWidth < 1024) {
+              menu.classList.add('hide');
+              menu.classList.remove('show');
+            }
+          });
+        });
       });
     </script>
   </head>
@@ -70,14 +78,12 @@
         <div class="section-content">
           <img
             class="logo"
-            src="img\a8bbebd7-672b-4cff-9eae-935d42c01843.png"
-            alt="Logo w kształcie szczytu góry"
+            src="img\logo.png"
+            alt="Logo w&nbsp;kształcie szczytu góry"
           />
-          <h1 class="title">Odkryj Siebie</h1>
-          <h2 class="subtitle">w Karkonoszach</h2>
           <p class="title-page">
             Wyjątkowe wyjazdy łączące psychologię, trening siłowy, jogę i
-            kobido. Czas tylko dla Ciebie w otoczeniu górskiej przyrody.
+            kobido. Czas tylko dla Ciebie w&nbsp;otoczeniu górskiej przyrody.
           </p>
           <a class="button" href="#booking"> Zarezerwuj swój wyjazd </a>
         </div>
@@ -92,26 +98,26 @@
             <div>
               <img
                 class="about-image"
-                src="img\bcdbc0a0faed1d931b2c86d9d65edb3a.png"
-                alt="Ścieżka górska"
+                src="img\GIRLS-10.png"
+                alt="Uczestniczki wyjazdu"
               />
             </div>
             <div>
               <p>
-                W sercu Karkonoszy tworzymy przestrzeń, gdzie kobiety mogą
+                w&nbsp;sercu Karkonoszy tworzymy przestrzeń, gdzie kobiety mogą
                 odnaleźć równowagę między ciałem a&nbsp;umysłem. Nasze wyjazdy
                 to unikalne połączenie pracy psychologicznej z&nbsp;aktywnością
                 fizyczną.
               </p>
               <p>
                 Oferujemy holistyczne podejście do rozwoju osobistego, łącząc
-                nowoczesne metody terapeutyczne z tradycyjnymi praktykami
+                nowoczesne metody terapeutyczne z&nbsp;tradycyjnymi praktykami
                 wellness. Każdy wyjazd to starannie zaplanowana podróż ku
                 lepszemu poznaniu siebie.
               </p>
               <p>
-                Górski klimat Karkonoszy sprzyja refleksji i odnowie. To idealne
-                miejsce, by zatrzymać się, odetchnąć i&nbsp;zainwestować
+                Górski klimat Karkonoszy sprzyja refleksji i&nbsp;odnowie. To
+                idealne miejsce, by zatrzymać się, odetchnąć i&nbsp;zainwestować
                 w&nbsp;siebie.
               </p>
             </div>
@@ -126,57 +132,108 @@
             <div class="team-member-card">
               <img
                 class="team-member-image"
-                src="img/83edc627e576e0de64be47079c8d275d.png"
+                src="img\img_2438-scaled.png"
                 alt="Jowita Misiakowska"
               />
               <h2>Jowita Misiakowska</h2>
               <hr />
               <p class="team-member-bio">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-                vel deserunt nam. Aut inventore porro aliquid illum error fuga
-                reprehenderit ut velit recusandae voluptates voluptatum eveniet
-                ipsam, fugit in enim?
+                Jestem psychologiem i&nbsp;psychoterapeutką w&nbsp;nurcie
+                poznawczo-behawioralnym oraz doktorantką psychologii zdrowia.
+                Wierzę, że dobrostan psychiczny to coś więcej niż brak trudności
+                – to uważność na siebie, swoje ciało i&nbsp;emocje. W&nbsp;pracy
+                łączę wiedzę opartą na badaniach naukowych z&nbsp;holistycznym
+                podejściem do zdrowia i&nbsp;życia.<br />
+                Podczas wyjazdu poprowadzę warsztat rozwojowy dla Was –
+                przestrzeń, w&nbsp;której będziesz mogła zatrzymać się,
+                odetchnąć i&nbsp;odkryć, czego naprawdę potrzebujesz. Bez
+                presji, w&nbsp;swoim tempie, w&nbsp;kobiecym gronie
+                i&nbsp;w&nbsp;otoczeniu natury.
               </p>
             </div>
             <div class="team-member-card">
               <img
                 class="team-member-image"
-                src="img\cc227b8948a4191a8097a342193eac96.png"
+                src="img\girls-6-scaled.png"
                 alt="Alicja Kaczmarek"
               />
               <h2>Alicja Kaczmarek</h2>
               <hr />
               <p class="team-member-bio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                voluptatem quisquam repellat, ut hic dolore aperiam mollitia
-                labore aliquid unde nostrum vitae officia enim consequuntur
-                quod, eum beatae expedita a.
+                Jestem trenerką personalną i&nbsp;studentką dietetyki. Na co
+                dzień prowadzę własne studio treningu personalnego,
+                w&nbsp;którym pomagam kobietom budować siłę, pewność siebie
+                i&nbsp;dobre samopoczucie.<br />
+
+                w&nbsp;pracy stawiam na indywidualne podejście i&nbsp;równowagę
+                – wierzę, że ruch ma wspierać ciało i&nbsp;umysł, a&nbsp;nie być
+                źródłem presji. Regularnie biorę udział w&nbsp;szkoleniach
+                i&nbsp;kursach, by stale rozwijać swoje umiejętności
+                i&nbsp;inspirować innych do mądrego, świadomego dbania
+                o&nbsp;siebie. Chcę pokazać, że aktywność fizyczna może stać się
+                nawykiem, a&nbsp;nie przymusem – czymś, co daje energię
+                i&nbsp;radość, zamiast zmęczenia.<br />
+
+                Podczas wyjazdu poprowadzę treningi siłowe oraz poranne rozruchy
+                dla chętnych, które pomogą Ci rozpocząć dzień z&nbsp;energią
+                i&nbsp;dobrą dawką ruchu – w&nbsp;zgodzie z&nbsp;Twoim ciałem
+                i&nbsp;w&nbsp;rytmie natury.<br />
               </p>
             </div>
             <div class="team-member-card">
               <img
                 class="team-member-image"
-                src="img\a62236578eefdc269a072034c915da0b.png"
+                src="img\girls-12-scaled.png"
                 alt="Magdalena Kamionka"
               />
               <h2>Magdalena Kamionka</h2>
               <hr />
               <p class="team-member-bio">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
-                unde temporibus dignissimos nesciunt nisi velit qui. Fugit
-                laudantium delectus voluptate, magnam quos quis, aut cupiditate
-                eos non laboriosam sed voluptatem.
+                Jestem certyfikowaną masażystka, instruktorką Kobido i
+                automasażu twarzy. Fascynują mnie naturalne metody dbania o
+                urodę i&nbsp;wewnętrzną harmonię.<br />
+
+                w&nbsp;swojej pracy łączę precyzję techniki z&nbsp;uważnością
+                i&nbsp;spokojem – wierzę, że dotyk potrafi nie tylko rozluźnić
+                ciało, ale też ukoić emocje i&nbsp;przywrócić równowagę.<br />
+
+                Na codzień wykonuje masaże i&nbsp;uczę sztuki automasażu
+                i&nbsp;jogi twarzy pokazując, że pielęgnacja może być formą
+                czułości wobec siebie.<br />
+
+                Podczas wyjazdu nauczę Cię automasażu twarzy - dzięki niemu
+                odkryjesz, jak w&nbsp;prosty i&nbsp;przyjemny sposób możesz dbać
+                o&nbsp;siebie każdego dnia.<br />
+
+                Podczas wyjazdu pokaże Ci proste techniki oraz opowiem jak w
+                prosty i&nbsp;przyjemny sposób możesz dbać o&nbsp;siebie każdego
+                dnia.<br />
               </p>
             </div>
             <div class="team-member-card">
-              <img class="team-member-image" src="" alt="" />
-              <h2>Anna ...</h2>
+              <img
+                class="team-member-image"
+                src="img\Brown-White-Neutral-Elegant-Clean-Beauty-Personal-That-Girl-Habits-Instagram-Post.png"
+                alt="Anna Krzyżanowska-Korzeniowska"
+              />
+              <h2>Anna Krzyżanowska-Korzeniowska</h2>
               <hr />
               <p class="team-member-bio">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                veniam corporis excepturi exercitationem? Laborum, quo et, dicta
-                dolorum, exercitationem sed in modi quam cum nisi harum culpa
-                asperiores ipsum sequi.
+                Jestem joginką i&nbsp;weganką. Ukończyłam dwa główne kursy
+                nauczycielskie: 200h YTT w&nbsp;Wiedniu, 200h YTT w&nbsp;Indiach
+                oraz 50h Yin Jogi.<br />
+
+                Uczę przede wszystkim takich stylów jogi, jak: vinyasa, ashtanga
+                i&nbsp;yin joga.<br />
+
+                Biegam po górach, a&nbsp;gdy nie praktykuję i&nbsp;nie biegam,
+                to spędzam czas na spacerach z&nbsp;moim psiakiem.<br />
+
+                Na moich zajęciach łączę tradycję z&nbsp;nowoczesnością. Podczas
+                praktyki stawiam na swobodę, dobrą energię
+                i&nbsp;bezpieczeństwo.<br />
+
+                Do zobaczenia na macie!<br />
               </p>
             </div>
           </div>
@@ -190,91 +247,77 @@
             <div class="offer-item">
               <img
                 class="offer-item-image"
-                src="img\7006c3ce-9e49-479c-a718-fbd8e97ddfaa.png"
-                alt="Sesje psychologiczne"
+                src="img\girls-221.png"
+                alt="Warsztat rozwojowy"
               />
-              <h2>Sesje psychologiczne</h2>
+              <h2>Warsztat rozwojowy</h2>
               <hr />
               <p class="offer-item-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                beatae recusandae harum consequatur dolores. Voluptatum atque,
-                est facere voluptas hic, neque quas, ea consequatur praesentium
-                laudantium perspiciatis modi quod accusamus!
+                Warsztat rozwojowy to czas dla Ciebie – na refleksję, rozmowę i
+                spotkanie z&nbsp;samą sobą. Poprzez ćwiczenia psychologiczne i
+                elementy uważności pomożemy Ci wzmocnić kontakt ze sobą
+                i&nbsp;zadbać o&nbsp;swoje emocje.
               </p>
             </div>
             <div class="offer-item">
               <img
                 class="offer-item-image"
-                src="img\1404a5d0b77b924551f6833f79100747.png"
+                src="img\girls-115.png"
                 alt="Trening siłowy"
               />
               <h2>Trening siłowy</h2>
               <hr />
               <p class="offer-item-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                assumenda doloremque rerum commodi aliquam placeat veritatis,
-                veniam id magni. Ipsum aliquid illo iure enim repellendus
-                necessitatibus accusamus quia delectus tempore!
+                Trening siłowy, który wzmocni Twoje ciało i&nbsp;doda Ci energii
+                – bez presji, w&nbsp;Twoim tempie i&nbsp;z troską o&nbsp;dobre
+                samopoczucie.
               </p>
             </div>
             <div class="offer-item">
               <img
                 class="offer-item-image"
-                src="img/3cba3f6d-0fc7-42b5-95be-365b4a6dd4ed.png"
-                alt="Joga i Mindfulness"
+                src="img\img_9935_original.png"
+                alt="Joga"
               />
-              <h2>Joga & Mindfulness</h2>
+              <h2>Joga</h2>
               <hr />
               <p class="offer-item-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                cum quas, a laboriosam sit optio dolorum pariatur voluptates sed
-                dolor excepturi natus debitis! Pariatur unde reiciendis dolorem
-                fugit excepturi nam.
+                Joga to chwila zatrzymania i&nbsp;kontaktu z&nbsp;własnym
+                ciałem. Delikatne sekwencje pomogą Ci odnaleźć spokój,
+                elastyczność i lekkość – w&nbsp;oddechu, ruchu i&nbsp;myślach.
               </p>
             </div>
             <div class="offer-item">
               <img
                 class="offer-item-image"
-                src="img\ee19991c21db0c64899c7e3af7b626a1.png"
+                src="img\girls-237.png"
                 alt="Masaż Kobido"
               />
               <h2>Masaż Kobido</h2>
               <hr />
               <p class="offer-item-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Nostrum maiores, eum nulla ipsum adipisci fugiat autem, alias,
-                cupiditate laborum similique atque odit? Vel quibusdam, saepe
-                voluptatem reprehenderit aliquid voluptas corporis.
+                Masaż Kobido to połączenie uważnego dotyku, relaksu
+                i&nbsp;odnowy. Pomaga rozluźnić napięcia, poprawia krążenie
+                i&nbsp;przywraca twarzy naturalny blask oraz świeżość.
               </p>
             </div>
 
             <div class="offer-item offer-item-wide">
               <img
                 class="offer-item-image-wide"
-                src="img\2175f85a440d8b2335ee671c0722d283.png"
-                alt="Medytująca kobieta w kreskówkowym stylu"
+                src="img\girls-270.png"
+                alt="Medytująca kobieta w&nbsp;kreskówkowym stylu"
               />
               <div>
-                <h2>
-                  ... a po zajęciach czas na chwilę relaksu (w malowniczych
-                  okolicznościach przyrody)
-                </h2>
+                <h2>Poza planem, w&nbsp;swoim rytmie!</h2>
                 <p class="offer-item-wide-description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Illum neque totam, dolor nemo voluptate laudantium beatae
-                  asperiores numquam, est rerum praesentium sequi modi esse
-                  tempora sunt facere quasi odit? Inventore.
+                  Po zajęciach przyjdzie czas na regenerację i&nbsp;wspólne
+                  chwile. Będzie przestrzeń na rozmowy, śmiech i&nbsp;nawiązanie
+                  relacji. Dla chętnych – morsowanie w&nbsp;górskim wodospadzie,
+                  a&nbsp;potem relaks w&nbsp;saunie lub balii. Wieczorem
+                  spotkamy się przy zimowej herbacie, by celebrować spokój
+                  i&nbsp;bliskość.
                 </p>
-              </div>
-              <div class="offer-item-wide-images">
-                <img
-                  src="img\73e9c634fc7ec73597a13717c4d93d27.png"
-                  alt="Wodospad"
-                />
-                <img
-                  src="img\01ac3e8d541dc1470ae1df42b5f76510.png"
-                  alt="Góry zimą"
-                />
               </div>
             </div>
 
@@ -287,11 +330,11 @@
                 />
                 <img
                   src="img\1a209bcc292e883ffdac704d170ed197.png"
-                  alt="Pokój z łóżkiem i korytarz"
+                  alt="Pokój z&nbsp;łóżkiem i&nbsp;korytarz"
                 />
                 <img
                   src="img\662f8126f837be918518f2ccc2bda73e.png"
-                  alt="Widok domku z zewnątrz"
+                  alt="Widok domku z&nbsp;zewnątrz"
                 />
                 <img
                   src="img\811c215a6e4c2894e6bb14479636a811.png"
@@ -303,7 +346,7 @@
                 />
                 <img
                   src="img\77338124fbea2e13f8930cc843e54fe8.png"
-                  alt="Pokój z łóżkiem i stolikiem"
+                  alt="Pokój z&nbsp;łóżkiem i&nbsp;stolikiem"
                 />
                 <img
                   src="img\c1c800daf9bc5e1c1098b7b2b204fa84.png"
@@ -311,8 +354,10 @@
                 />
                 <img
                   src="img\d8329fd3f0ee140ad34cfd1b2dbf3de9.png"
-                  alt="Sala do jogi z matami"
+                  alt="Sala do jogi z&nbsp;matami"
                 />
+                <img src="img\GIRLS-16.png" alt="Balia" />
+                <img src="img\GIRLS-17.png" alt="Balia - zbliżenie" />
               </div>
             </div>
 
@@ -320,68 +365,110 @@
               <div>
                 <h2>GDZIE?</h2>
                 <p class="offer-item-wide-description">
-                  🏠 Bukowy Gaj 4, 58-563<br />
-                  Przesieka
+                  🏠 Bukowy Gaj 4,<br />
+                  58-563 Przesieka
                 </p>
-                <h2>NOCLEGI</h2>
                 <p class="offer-item-wide-description">
-                  Nocować będziemy w 2 oraz 4 osobowych pokojach, Lorem ipsum
-                  dolor sit amet consectetur adipisicing elit.
+                  Spać będziecie w&nbsp;jednym z&nbsp;piękniejszych zakątków
+                  Przesieki, czyli Bukowym Gaju. W&nbsp;jednym z&nbsp;dwóch
+                  domów, które noszą w&nbsp;sobie niesamowite historię
+                  o&nbsp;których nie zapominamy i&nbsp;staramy się pielęgnować.
+                  Jeden z&nbsp;domów przed wojną był siedzibą Prezydenta
+                  Jeleniej Góry, w&nbsp;latach 60-tych mieszkał tutaj bardzo
+                  znany brytyjski pisarz.
                 </p>
+                <p class="offer-item-wide-description">
+                  Następnie był to ośrodek wypoczynkowy a&nbsp;na końcu trafił
+                  do Almy Yoray, która przybyła w&nbsp;Karkonosze w&nbsp;latach
+                  80tych. Ponad dwie dekady prowadziła tutaj warsztaty jogowe,
+                  warsztaty tai chi oraz medytacji. Pomagała tym, którzy pomocy
+                  potrzebowali prowadząc zajęcia plastyczne dla dzieciaków z
+                  Przesieki i&nbsp;okolic. Co ciekawe – nasze domy nadal
+                  kojarzone są z&nbsp;buddyzmem oraz medytacją. Odwiedza nas
+                  mnóstwo grup, które prowadzą tutaj tego rodzaju warsztaty.
+                </p>
+              </div>
+              <div class="offer-item-map">
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDDFB0JGxKsFdllBE1ZBIcwwJAG_TRBLC4&q=Bukowy+Gaj+4,+58-563+Przesieka"
+                  width="450"
+                  height="600"
+                  frameborder="0"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+            <div class="offer-item offer-item-gallery offer-item-medium">
+              <h2>NOCLEGI</h2>
+              <p class="offer-item-wide-description">
+                Zatrzymamy się w&nbsp;klimatycznym, górskim domu Montanum
+                Przesieka – miejscu z&nbsp;duszą, pełnym ciepła i&nbsp;spokoju,
+                w&nbsp;samym sercu natury.<br />
 
-                <h2>WYŻYWIENIE</h2>
-                <p class="offer-item-wide-description">
-                  W cenie dwa śniadania, Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit.
-                </p>
+                Do naszej dyspozycji będą przytulne pokoje rozmieszczone na
+                parterze i&nbsp;piętrze, zachowujące niepowtarzalny, domowy
+                charakter tego miejsca.
+              </p>
+              <div class="offer-item-gallery-images">
+                <img src="img\pokoje1.png" alt="Wnętrze pokoju" />
+                <img src="img\pokoje2.png" alt="Wnętrze pokoju" />
               </div>
-              <div class="offer-item-wide-images">
-                <img
-                  src="img\87215f8bfa9194e247d3871a4974fdba.png"
-                  alt="Stół z jedzeniem"
-                />
-                <img
-                  src="img\7b2f4a2609fcd82f85294aa3ec0a49c3.png"
-                  alt="Rząd krzeseł przy stole"
-                />
+              <p class="offer-item-wide-description">
+                Na miejscu znajduje się ogólnodostępna kuchnia, choć
+                w&nbsp;trakcie pobytu będziemy korzystać z&nbsp;trzech pysznych
+                posiłków dziennie, przygotowywanych przez naszego kucharza.<br />
+
+                w&nbsp;tym samym budynku znajduje się sala warsztatowa,
+                z&nbsp;której będziemy korzystać podczas zajęć. Do dyspozycji
+                uczestniczek jest także sauna i&nbsp;balia, idealne na wieczorny
+                relaks po dniu pełnym aktywności.
+              </p>
+              <div class="offer-item-gallery-images">
+                <img src="img\pokoje3.png" alt="Wnętrze pokoju" />
+                <img src="img\pokoje4.png" alt="Wnętrze pokoju" />
+              </div>
+              <p class="offer-item-wide-description">
+                Na werandzie z&nbsp;widokiem na ogród znajduje się przestrzeń do
+                wspólnych posiłków i&nbsp;rozmów – to właśnie tam będziemy
+                spędzać spokojne, ciepłe chwile razem.
+              </p>
+              <div class="offer-item-gallery-images">
+                <img src="img\łazienka1.png" alt="Wnętrze łazienki" />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="timetable" class="bg-dark">
-        <div class="section-content">
-          <h1>Harmonogram wyjazdu</h1>
-          <div class="timetable-content">
-            <div class="timetable-day-card">
-              <h2>Dzień 1</h2>
-              <hr />
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti tempore delectus repellendus nobis molestiae impedit
-                laudantium sint adipisci deleniti sit. Animi distinctio facere
-                dolorum sed dicta sequi expedita eveniet autem.
+
+            <div class="offer-item offer-item-gallery offer-item-medium">
+              <h2>WYŻYWIENIE</h2>
+              <p class="offer-item-wide-description">
+                Podczas wyjazdu o&nbsp;nasze posiłki zadba kucharz
+                z&nbsp;wieloletnim doświadczeniem, który wspólnie
+                z&nbsp;dietetykiem przygotuje zbilansowane i&nbsp;pełne smaku
+                dania. Każdego dnia serwowane będą trzy pyszne posiłki,
+                dopasowane do preferencji uczestniczek.
               </p>
-            </div>
-            <div class="timetable-day-card">
-              <h2>Dzień 2</h2>
-              <hr />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officiis nobis accusantium cum? Sapiente, suscipit adipisci
-                libero dolorem dicta iste dignissimos molestias saepe corrupti?
-                Maxime, quam vitae incidunt ratione a dolores!
+              <div class="offer-item-gallery-images">
+                <img src="img\jedzenie1.png" alt="Danie w&nbsp;półmisku" />
+                <img src="img\jedzenie2.png" alt="Miski z&nbsp;zupą" />
+              </div>
+              <p class="offer-item-wide-description">
+                Uwzględniamy wszelkie nietolerancje i&nbsp;preferencje
+                żywieniowe, tak aby każda z&nbsp;Was mogła cieszyć się posiłkami
+                w&nbsp;pełni komfortowo i&nbsp;świadomie.
               </p>
-            </div>
-            <div class="timetable-day-card">
-              <h2>Dzień 3</h2>
-              <hr />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Incidunt porro voluptas assumenda. Autem distinctio voluptatum
-                ipsam voluptas sapiente, error accusantium explicabo vel
-                commodi, quaerat sit fuga nostrum adipisci corrupti dolores.
+              <div class="offer-item-gallery-images">
+                <img src="img\jedzenie3.png" alt="Desery na talerzykach" />
+                <img src="img\jedzenie4.png" alt="Półmiski z&nbsp;jedzeniem" />
+              </div>
+              <p class="offer-item-wide-description">
+                w&nbsp;ciągu dnia dostępne będą również zdrowe przekąski
+                i&nbsp;napoje, które dodadzą energii między zajęciami
+                i&nbsp;umilą wspólny czas na werandzie.
               </p>
+              <div class="offer-item-gallery-images">
+                <img src="img\jedzenie5.png" alt="Kucharz prezentujący danie" />
+              </div>
             </div>
           </div>
         </div>
@@ -390,13 +477,12 @@
       <section id="booking" class="bg-light">
         <div class="section-content">
           <h1>Zarezerwuj swój wyjazd</h1>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdsD8vVG7jzoVvQcCgwGoazFXcUN4dKPyT7gU2_6ynrosiMSA/viewform?embedded=true"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            >Ładuję…</iframe
+          <a
+            class="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScluacyOCwshaZ7gxrArEWnkGAPFg1zIjnciLd7pspjaE5Tdw/viewform?usp=header"
           >
+            Zarezerwuj swój wyjazd
+          </a>
         </div>
       </section>
     </main>
